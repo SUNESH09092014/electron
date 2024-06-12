@@ -12,6 +12,7 @@ mv_if_exist() {
   fi
 }
 
+# Restore generated artifacts
 mv_if_exist dist.zip src/out/Default
 mv_if_exist node_headers.tar.gz src/out/Default/gen
 mv_if_exist symbols.zip src/out/Default
@@ -20,3 +21,6 @@ mv_if_exist chromedriver.zip src/out/Default
 mv_if_exist ffmpeg.zip src/out/ffmpeg
 mv_if_exist hunspell_dictionaries.zip src/out/Default
 mv_if_exist cross-arch-snapshots src
+
+# Restore build artifacts
+tar -xzf build_artifacts.tar.gz
